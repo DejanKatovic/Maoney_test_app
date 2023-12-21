@@ -216,22 +216,16 @@ export const Footer = () => {
         >
           <Box sx={{ display: "flex", gap: 5 }}>
             {socialMedias.map((entry, index) => (
-              <a
-                href={`https://${entry.title.toLowerCase()}.com/${entry.link}`}
-                target="_blank"
-                key={index}
+              <IconButton
+                sx={{
+                  width: "40px",
+                  height: "40px",
+                  color: "linear-gradient(180deg, #6364FF 0%, #563ACC 100%)",
+                  bgcolor: "white",
+                }}
               >
-                <IconButton
-                  sx={{
-                    width: "40px",
-                    height: "40px",
-                    color: "linear-gradient(180deg, #6364FF 0%, #563ACC 100%)",
-                    bgcolor: "white",
-                  }}
-                >
-                  {entry.icon}
-                </IconButton>
-              </a>
+                {entry.icon}
+              </IconButton>
             ))}
           </Box>
           <Box>
