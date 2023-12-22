@@ -8,6 +8,7 @@ import { Twitter } from "../../../assets/icons/twitter.jsx";
 import { YouTube } from "../../../assets/icons/youtub.jsx";
 import { Tiktok } from "../../../assets/icons/ticTokIcon.jsx";
 import { IconButton } from "@mui/material";
+import { v4 as uuidv4 } from "uuid";
 
 const socialMedias = [
   {
@@ -39,9 +40,9 @@ const NavigationItem = ({ title, tags }) => {
         {title}
       </Typography.SubTitle>
       <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
-        {tags?.map((entry, index) => (
+        {tags?.map((entry) => (
           <Box
-            key={index}
+            key={uuidv4()}
             onClick={() =>
               navigate(`${entry.split(" ").join("&").toLowerCase()}`)
             }
@@ -131,9 +132,9 @@ export const Footer = () => {
                 gap: 3,
               }}
             >
-              {navigations.map((entry, index) => (
+              {navigations.map((entry) => (
                 <NavigationItem
-                  key={index}
+                  key={uuidv4()}
                   title={entry.title}
                   tags={entry.tags}
                 />
@@ -215,8 +216,9 @@ export const Footer = () => {
           }}
         >
           <Box sx={{ display: "flex", gap: 5 }}>
-            {socialMedias.map((entry, index) => (
+            {socialMedias.map((entry) => (
               <IconButton
+                key={uuidv4()}
                 sx={{
                   width: "40px",
                   height: "40px",

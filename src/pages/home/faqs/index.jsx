@@ -9,6 +9,8 @@ import GoogleStoreImg from "../../../assets/imgs/GoogleStore.png";
 import AppStoreImg from "../../../assets/imgs/AppStore.png";
 import Iphone2 from "../../../assets/imgs/iPhone 2_2.png";
 import msgImg from "../../../assets/imgs/msgIcon.png";
+import { v4 as uuidv4 } from "uuid";
+
 const heading = {
   header: "faq's",
   title: "Got questions?",
@@ -48,7 +50,7 @@ export const Faqs = () => {
       <List sx={{ maxWidth: "720px", width: "100%" }}>
         {data.map((entry, index) => (
           <FaqsItem
-            key={index}
+            key={uuidv4()}
             title={entry.title}
             detail={entry.detail}
             sx={{ borderTopWidth: index === 0 ? 0 : 1 }}
@@ -100,7 +102,7 @@ export const Faqs = () => {
               {[GoogleStoreImg, AppStoreImg].map((entry, index) => (
                 <Box
                   component={"img"}
-                  key={index}
+                  key={uuidv4()}
                   alt={index}
                   src={entry}
                   sx={{ width: { xs: 145, md: 160 }, height: "auto" }}

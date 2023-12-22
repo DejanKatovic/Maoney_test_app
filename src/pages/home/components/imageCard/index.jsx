@@ -6,15 +6,18 @@ export const ImageCard = ({ src, title, detail, sx, customImg }) => {
     <Box
       sx={{
         display: "flex",
-        width: "100%",
-        maxWidth: "618px",
         alignItems: "center",
-        justifyContent: "center",
+        width: "100%",
+        justifyContent: { xs: "center", md: "flex-start" },
+        display: "flex",
+        flexShrink: 1,
       }}
     >
       <Box
         sx={{
           display: "flex",
+          width: { xs: "100%", lg: 618 },
+          maxWidth: 618,
           flexGrow: 1,
           flexShrink: 1,
           px: { xs: "15px", md: "32px" },

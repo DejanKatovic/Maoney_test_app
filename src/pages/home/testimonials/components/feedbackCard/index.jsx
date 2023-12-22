@@ -4,7 +4,7 @@ import { Typography } from "../../../../../CustomUI/typography";
 
 export const FeedBackCard = ({ detail, userName, company, avatar }) => {
   return (
-    <Box sx={{ mx: "20px" }}>
+    <Box sx={{ mx: { xs: 0, md: "20px" } }}>
       <Box
         sx={{
           height: { xs: 405, md: 450 },
@@ -13,6 +13,7 @@ export const FeedBackCard = ({ detail, userName, company, avatar }) => {
           border: "1px rgba(147.69, 147.69, 147.69, 0.50) solid",
           bgcolor: "rgba(229, 219, 251, 0.70)",
           flexDirection: "column",
+
           justifyContent: "flex-start",
           alignItems: "flex-start",
           display: "flex",

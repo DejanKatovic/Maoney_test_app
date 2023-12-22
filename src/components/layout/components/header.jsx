@@ -16,6 +16,7 @@ import { RoundButton } from "../../../CustomUI/roundButton";
 import { FastForwardRounded } from "../../../assets/icons/FastForwardRounded";
 import { MobileIcon } from "../../../assets/icons/mobileIcon";
 import MenuIcon from "@mui/icons-material/Menu";
+import { v4 as uuidv4 } from "uuid";
 
 const navs = [
   {
@@ -97,6 +98,7 @@ export const Header = ({ props }) => {
                     },
                     display: "flex",
                     alignItems: "center",
+                    "&:hover": { cursor: "pointer" },
                   }}
                   onClick={() => navigate("/")}
                 >
@@ -117,7 +119,13 @@ export const Header = ({ props }) => {
                 <Box flexGrow={1} />
                 <Box sx={{ display: { xs: "none", md: "flex" }, gap: "3rem" }}>
                   {navs.map((entry) => (
-                    <Box key={entry.id} onClick={() => navigate(entry.link)}>
+                    <Box
+                      key={uuidv4()}
+                      onClick={() => navigate(entry.link)}
+                      sx={{
+                        "&:hover": { cursor: "pointer" },
+                      }}
+                    >
                       <Typography
                         sx={{
                           color: "#3A3A3A",
@@ -168,7 +176,10 @@ export const Header = ({ props }) => {
                   >
                     {navs.map((entry) => (
                       <MenuItem
-                        key={entry.id}
+                        key={uuidv4()}
+                        sx={{
+                          "&:hover": { cursor: "pointer" },
+                        }}
                         onClick={() => handleMenuItemClick(entry.link)}
                       >
                         <Typography

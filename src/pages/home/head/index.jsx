@@ -11,8 +11,21 @@ import Mark1 from "../../../assets/imgs/mark1.png";
 import Mark2 from "../../../assets/imgs/mark2.png";
 import Mark3 from "../../../assets/imgs/mark3.png";
 import Mark4 from "../../../assets/imgs/mark4.png";
-import Mark5 from "../../../assets/imgs/mark5.png";
+import { v4 as uuidv4 } from "uuid";
+import Slider from "react-slick";
+
 export const Head = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: false,
+    autoplaySpeed: 2000,
+    variableWidth: true,
+    rtl: true,
+  };
   const iphones = [
     {
       src: Iphone1,
@@ -53,9 +66,24 @@ export const Head = () => {
       width: { xs: 95, lg: 150 },
     },
     {
-      src: Mark5,
+      src: Mark1,
       alt: "Mark5",
-      width: { xs: 90, lg: 145 },
+      width: { xs: 95, lg: 150 },
+    },
+    {
+      src: Mark2,
+      alt: "Mark6",
+      width: { xs: 95, lg: 150 },
+    },
+    {
+      src: Mark3,
+      alt: "Mark7",
+      width: { xs: 40, lg: 70 },
+    },
+    {
+      src: Mark4,
+      alt: "Mark8",
+      width: { xs: 95, lg: 150 },
     },
   ];
   return (
@@ -106,7 +134,7 @@ export const Head = () => {
           {iphones.map((entry, index) => (
             <Box
               component={"img"}
-              key={index}
+              key={uuidv4()}
               src={entry.src}
               height={"auto"}
               alt={entry.alt}
@@ -121,51 +149,67 @@ export const Head = () => {
       </Box>
       <Box
         sx={{
-          width: "100%",
+          width: "100vw",
           position: "relative",
           background: "#E5DBFB",
-          display: "flex",
-          alignItems: { xs: "flex-start", md: "center" },
-          flexDirection: { xs: "column", md: "row" },
-          pl: { xs: 3, md: 11 },
-          pt: { xs: 3, md: 5 },
-          py: { xs: "16.5px", md: 5 },
         }}
       >
-        <Typography.Article
+        <CustomContainer
           sx={{
-            fontSize: { xs: "0.75rem", md: "1.125rem" },
-            lineHeight: 1.5,
-            width: "339px",
-            letterSpacing: 0,
-            mr: "70px",
+            justifyContent: "flex-start",
+            alignItems: { xs: "flex-start", md: "center" },
+            flexDirection: { xs: "column", md: "row" },
+            pl: { xs: 3, lg: 11 },
+            pt: { xs: 3, lg: 5 },
+            pr: 0,
+            py: { xs: "16.5px", md: 5 },
+            gap: { xs: 2, md: 9 },
           }}
         >
-          We're have been recognized by Leading Finance Publications and
-          Organizations.
-        </Typography.Article>
-        <Box
-          sx={{
-            display: "flex",
-            gap: { xs: "32px", md: "60px", lg: "90px", alignItems: "center" },
-            overflowX: "scroll",
-            "&::-webkit-scrollbar": { display: "none" },
-          }}
-        >
-          {marks.map((entry, index) => (
-            <Box
-              component={"img"}
-              key={index}
-              src={entry.src}
-              alt={entry.alt}
+          <Box sx={{ width: { xs: 236, md: 339 }, flexShrink: 0 }}>
+            <Typography.Article
               sx={{
-                height: "auto",
-                width: entry.width,
+                fontSize: { xs: "0.75rem", md: "1.125rem" },
+                lineHeight: 1.5,
+                letterSpacing: 0,
               }}
-              height="auto"
-            />
-          ))}
-        </Box>
+            >
+              We're have been recognized by Leading Finance Publications and
+              Organizations.
+            </Typography.Article>
+          </Box>
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+            }}
+          >
+            <Slider {...settings}>
+              {marks.map((entry) => (
+                <Box
+                  key={uuidv4()}
+                  sx={{
+                    width: entry.width,
+                    mx: { xs: "16px", md: "45px" },
+                    display: "flex!important",
+                    alignItems: "center",
+                    height: { xs: 47.5, md: 75 },
+                  }}
+                >
+                  <Box
+                    component={"img"}
+                    src={entry.src}
+                    alt={entry.alt}
+                    sx={{
+                      width: entry.width,
+                      height: "auto",
+                    }}
+                  />
+                </Box>
+              ))}
+            </Slider>
+          </Box>
+        </CustomContainer>
         <Box
           style={{
             width: 88,

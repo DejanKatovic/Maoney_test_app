@@ -1,13 +1,26 @@
 import React from "react";
-import { Box, Divider, Grid } from "@mui/material";
-import { Typography } from "../../../CustomUI/typography";
+import { Box, Grid } from "@mui/material";
+import { CustomDivder } from "../components/divider";
 import { MainTitle } from "../components/mainTitle";
 import { CustomContainer } from "../../../CustomUI/customContainer";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Ticket } from "./components/ticket";
 import { ImageCard } from "../components/imageCard";
+import Slider from "react-slick";
 import Iphone2 from "../../../assets/imgs/iPhone2.png";
+import { v4 as uuidv4 } from "uuid";
+
 const tickets = [
+  { content: "Expensive high fees and unfavorable exchange rate" },
+  { content: "Transfer delays and inconvenience" },
+  { content: "Fraud and loss funds" },
+  { content: "Traditional in-person transactions" },
+  { content: "Lack of transparency" },
+  { content: "Limited payment methods" },
+  { content: "Complex verfication processes" },
+  { content: "Long payment wait times" },
+  { content: "Hidden costs" },
+  { content: "Currency exchange rates" },
   { content: "Expensive high fees and unfavorable exchange rate" },
   { content: "Transfer delays and inconvenience" },
   { content: "Fraud and loss funds" },
@@ -32,6 +45,19 @@ const heading = {
 };
 export const Transaction = () => {
   const isSmallDevice = useMediaQuery((theme) => theme.breakpoints.down("md"));
+  const settings = {
+    className: "center",
+    dots: false,
+    arrows: false,
+    infinite: true,
+    vertical: true,
+    verticalSwiping: true,
+    centerPadding: "-30px",
+    slidesToShow: isSmallDevice ? 7 : 9,
+    centerMode: true,
+    speed: 500,
+    focusOnSelect: true,
+  };
   return (
     <CustomContainer>
       <MainTitle
@@ -39,12 +65,7 @@ export const Transaction = () => {
         title={heading.title}
         detail={heading.detail}
       />
-      <Grid
-        container
-        sx={{ gap: { xs: "24px", md: "33px" } }}
-        justifyContent="center"
-        alignItems="center"
-      >
+      <Grid container alignItems="center" columnSpacing={3}>
         <Grid
           item
           xs={12}
@@ -53,12 +74,20 @@ export const Transaction = () => {
         >
           <Box
             sx={{
-              height: "542px",
+              height: "auto",
               position: "relative",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "flex-start",
               display: "flex",
+              "& .slick-center .ticket-wrapper": {
+                borderColor: "rgba(147.69, 147.69, 147.69, 0.5)",
+                bgcolor: "#F9F9F9",
+                "& .clearIcon": {
+                  fontSize: 24,
+                  color: "#F20C0C",
+                },
+              },
             }}
           >
             <Box
@@ -67,9 +96,10 @@ export const Transaction = () => {
                 position: "absolute",
                 top: 0,
                 width: "100%",
-                height: 241,
+                height: "20%",
                 background:
                   "linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0) 100%)",
+                zIndex: 3,
               }}
             />
             <Box
@@ -77,45 +107,26 @@ export const Transaction = () => {
               sx={{
                 position: "absolute",
                 bottom: 0,
+                height: "20%",
                 width: "100%",
-                height: 241,
+                zIndex: 4,
                 background:
                   "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, white 100%)",
               }}
             />
-            {tickets.map((entry, index) => (
-              <Ticket key={index} content={entry.content} />
-            ))}
+            <Slider {...settings}>
+              {tickets.map((entry) => (
+                <Ticket key={uuidv4()} content={entry.content} />
+              ))}
+            </Slider>
           </Box>
         </Grid>
-        <Divider
-          orientation={isSmallDevice ? "horizontal" : "vertical"}
-          sx={{
-            width: {
-              xs: "100%",
-              md: "auto",
-            },
-            p: { xs: "0 20px", md: "20px 0" },
-          }}
-          flexItem
-        >
-          <Typography.TitleHeader
-            sx={{
-              fontSize: { xs: 15, md: 18 },
-              color: "text.secondary",
-            }}
-          >
-            VS
-          </Typography.TitleHeader>
-        </Divider>
+        <CustomDivder />
         <Grid
           item
           xs={12}
           md
-          sx={{
-            display: "flex",
-            justifyContent: { xs: "center", md: "flex-end" },
-          }}
+          sx={{ display: "flex", justifiyContent: "right" }}
         >
           <ImageCard src={Iphone2} title={data.title} detail={data.detail} />
         </Grid>

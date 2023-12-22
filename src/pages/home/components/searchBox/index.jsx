@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Avatar, IconButton } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { RoundButton } from "../../../../CustomUI/roundButton";
 import { ArrowDropDown } from "@mui/icons-material";
+import { ArrowDropUp } from "@mui/icons-material";
+
 export const SearchBox = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <Box
       sx={{
@@ -16,6 +20,11 @@ export const SearchBox = () => {
     >
       <Autocomplete
         options={countries}
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        autoComplete
+        autoSelect
+        selectOnFocus={isOpen}
         getOptionLabel={(option) => `+${option.phone}`}
         sx={{
           height: 60,
@@ -34,6 +43,8 @@ export const SearchBox = () => {
         )}
         renderInput={(params) => (
           <TextField
+            onBlur={() => setIsOpen(false)}
+            onFocus={() => setIsOpen(true)}
             {...params}
             variant="outlined"
             InputProps={{
@@ -60,8 +71,9 @@ export const SearchBox = () => {
                       borderTopRightRadius: 0,
                       borderBottomRightRadius: 0,
                     }}
+                    onClick={() => setIsOpen((prev) => !prev)}
                   >
-                    <ArrowDropDown />
+                    {isOpen ? <ArrowDropUp /> : <ArrowDropDown />}
                   </IconButton>
                 </>
               ),

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, IconButton } from "@mui/material";
 import { MainTitle } from "../components/mainTitle";
 import { FeedBackCard } from "./components/feedbackCard";
@@ -7,6 +7,7 @@ import { CustomContainer } from "../../../CustomUI/customContainer";
 import Slider from "react-slick";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+import { v4 as uuidv4 } from "uuid";
 
 const data = [
   {
@@ -55,7 +56,7 @@ const NextArrow = ({ onClick }) => (
     }}
     onClick={onClick}
   >
-    <NavigateNextIcon />
+    <NavigateNextIcon sx={{ fontSize: { xs: 16, md: 24 } }} />
   </IconButton>
 );
 
@@ -78,6 +79,7 @@ const PrevArrow = ({ onClick }) => (
   </IconButton>
 );
 export const Testimonials = () => {
+  const [isHovered, setIsHovered] = useState(false);
   const settings = {
     className: "center",
     centerMode: true,
@@ -85,16 +87,18 @@ export const Testimonials = () => {
     centerPadding: "175px",
     slidesToShow: 1,
     speed: 500,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    nextArrow: isHovered && <NextArrow />,
+    prevArrow: isHovered && <PrevArrow />,
+    pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 900,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
           centerMode: false,
         },
       },
@@ -111,28 +115,14 @@ export const Testimonials = () => {
       <Box
         sx={{
           width: "100%",
-          ".slick-initialized .slick-slide": {
-            display: "flex",
-            justifyContent: "center",
-          },
-          ".slick-dots li button": {
-            width: "0.5rem",
-            height: "0.5rem",
-            backgroundColor: "rgb(255, 255, 255, 0.5)",
-            borderRadius: "50%",
-          },
-          ".slick-dots li button:before": {
-            display: "none",
-          },
-          ".slick-dots .slick-active button": {
-            backgroundColor: "rgb(255, 255, 255, 1)",
-          },
         }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         <Slider {...settings}>
           {data.map((entry) => (
             <FeedBackCard
-              key={entry.id}
+              key={uuidv4()}
               userName={entry.username}
               company={entry.company}
               avatar={entry.avatar}
