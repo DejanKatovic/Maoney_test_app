@@ -35,8 +35,8 @@ export const ImageCard = ({ src, title, detail, sx, customImg }) => {
               height: { xs: "183px", md: "288px" },
               width: "auto",
               overflow: "hidden",
-              position: "relative",
               display: "flex",
+              position: "relative",
               justifyContent: "center",
             }}
           >
