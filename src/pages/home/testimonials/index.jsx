@@ -47,16 +47,16 @@ const NextArrow = ({ onClick }) => (
     sx={{
       position: "absolute",
       top: "50%",
-      right: { xs: 18, md: 247 },
+      right: { xs: 18, lg: 247 },
       transform: "translateY(-50%)",
       zIndex: 1,
-      width: { xs: 32, md: 48 },
+      width: { xs: 32, lg: 48 },
       bgcolor: "white",
-      height: { xs: 32, md: 48 },
+      height: { xs: 32, lg: 48 },
     }}
     onClick={onClick}
   >
-    <NavigateNextIcon sx={{ fontSize: { xs: 16, md: 24 } }} />
+    <NavigateNextIcon sx={{ fontSize: { xs: 16, lg: 24 } }} />
   </IconButton>
 );
 
@@ -66,16 +66,16 @@ const PrevArrow = ({ onClick }) => (
     sx={{
       position: "absolute",
       top: "50%",
-      left: { xs: 18, md: 247 },
+      left: { xs: 18, lg: 247 },
       transform: "translateY(-50%)",
       zIndex: 1,
-      width: { xs: 32, md: 48 },
-      height: { xs: 32, md: 48 },
+      width: { xs: 32, lg: 48 },
+      height: { xs: 32, lg: 48 },
       bgcolor: "white",
     }}
     onClick={onClick}
   >
-    <NavigateBeforeIcon sx={{ fontSize: { xs: 16, md: 24 } }} />
+    <NavigateBeforeIcon sx={{ fontSize: { xs: 16, lg: 24 } }} />
   </IconButton>
 );
 export const Testimonials = () => {
@@ -110,7 +110,7 @@ export const Testimonials = () => {
       <MainTitle
         title={heading.title}
         header={heading.header}
-        sx={{ mb: { xs: "44px", md: "72px" } }}
+        sx={{ mb: { xs: "44px", lg: "72px" } }}
       />
       <Box
         sx={{

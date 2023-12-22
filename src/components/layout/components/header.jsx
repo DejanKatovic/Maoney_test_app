@@ -90,11 +90,11 @@ export const Header = ({ props }) => {
                     flexShrink: 0,
                     border: {
                       xs: "0",
-                      md: "1px solid black",
+                      lg: "1px solid black",
                     },
                     boxShadow: {
                       xs: "none",
-                      md: "0px 4px 4px rgb(0, 0, 0, 0.25)",
+                      lg: "0px 4px 4px rgb(0, 0, 0, 0.25)",
                     },
                     display: "flex",
                     alignItems: "center",
@@ -103,12 +103,12 @@ export const Header = ({ props }) => {
                   onClick={() => navigate("/")}
                 >
                   <FastForwardRounded
-                    sx={{ display: { xs: "flex", md: "none" }, pr: 1 }}
+                    sx={{ display: { xs: "flex", lg: "none" }, pr: 1 }}
                   />
                   <Typography
                     sx={{
                       color: "text.primary",
-                      fontSize: { xs: "1rem", md: "1.5rem" },
+                      fontSize: { xs: "1rem", lg: "1.5rem" },
                       fontWeight: 500,
                       fontFamily: "Grifter",
                     }}
@@ -117,7 +117,7 @@ export const Header = ({ props }) => {
                   </Typography>
                 </Box>
                 <Box flexGrow={1} />
-                <Box sx={{ display: { xs: "none", md: "flex" }, gap: "3rem" }}>
+                <Box sx={{ display: { xs: "none", lg: "flex" }, gap: "3rem" }}>
                   {navs.map((entry) => (
                     <Box
                       key={uuidv4()}
@@ -135,7 +135,7 @@ export const Header = ({ props }) => {
                           wordwrap: "break-word",
                           textShadow: {
                             xs: "0",
-                            md: "0px 4px 4px rgb(0, 0, 0, 0.25)",
+                            lg: "0px 4px 4px rgb(0, 0, 0, 0.25)",
                           },
                         }}
                       >
@@ -144,7 +144,7 @@ export const Header = ({ props }) => {
                     </Box>
                   ))}
                 </Box>
-                <Box sx={{ display: { xs: "flex", md: "none" } }}>
+                <Box sx={{ display: { xs: "flex", lg: "none" } }}>
                   <IconButton
                     size="large"
                     aria-label="account of current user"
@@ -171,7 +171,7 @@ export const Header = ({ props }) => {
                     open={!!anchorEl}
                     onClose={handleMenuClose}
                     sx={{
-                      display: { xs: "block", md: "none" },
+                      display: { xs: "block", lg: "none" },
                     }}
                   >
                     {navs.map((entry) => (
@@ -191,7 +191,7 @@ export const Header = ({ props }) => {
                             wordwrap: "break-word",
                             textShadow: {
                               xs: "0",
-                              md: "0px 4px 4px rgb(0, 0, 0, 0.25)",
+                              lg: "0px 4px 4px rgb(0, 0, 0, 0.25)",
                             },
                           }}
                         >
@@ -205,11 +205,11 @@ export const Header = ({ props }) => {
                   sx={{
                     display: {
                       xs: "none",
-                      md: "flex",
+                      lg: "flex",
                     },
                     boxShadow: {
                       xs: "none",
-                      md: "0px 4px 4px rgb(0, 0, 0, 0.25)",
+                      lg: "0px 4px 4px rgb(0, 0, 0, 0.25)",
                     },
                     bgcolor: "primary.light",
                   }}

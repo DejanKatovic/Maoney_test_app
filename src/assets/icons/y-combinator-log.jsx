@@ -4,9 +4,9 @@ export const YcombinatorMark = ({ sx, color = "#838383" }) => {
   return (
     <svg
       style={{
-        width: { xs: 90, md: 145 },
-        height: { xs: 20, md: 30 },
-        viewBox: { xs: "0 0 90 20", md: "0 0 145 30" },
+        width: { xs: 90, lg: 145 },
+        height: { xs: 20, lg: 30 },
+        viewBox: { xs: "0 0 90 20", lg: "0 0 145 30" },
       }}
       fill={"#838383"}
       xmlns="http://www.w3.org/2000/svg"

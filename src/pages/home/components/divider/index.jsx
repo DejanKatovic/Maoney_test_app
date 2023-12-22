@@ -3,27 +3,27 @@ import { Divider } from "@mui/material";
 import { Typography } from "../../../../CustomUI/typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 export const CustomDivder = ({ title = "VS" }) => {
-  const isSmallDevice = useMediaQuery((theme) => theme.breakpoints.down("md"));
+  const isSmallDevice = useMediaQuery((theme) => theme.breakpoints.down("lg"));
   return (
     <Divider
       orientation={isSmallDevice ? "horizontal" : "vertical"}
       sx={{
         height: {
           xs: "auto",
-          md: "100%",
+          lg: "100%",
         },
         width: {
           xs: "100%",
-          md: "auto",
-          flexShrink: "100o",
+          lg: "auto",
+          flexShrink: 1,
         },
-        // p: { xs: "0 20px", md: "20px 0" },
+        maxWidth: 1264,
       }}
       flexItem
     >
       <Typography.TitleHeader
         sx={{
-          fontSize: { xs: 15, md: 18 },
+          fontSize: { xs: 15, lg: 18 },
           color: "text.secondary",
         }}
       >

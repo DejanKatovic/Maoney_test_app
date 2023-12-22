@@ -8,7 +8,7 @@ export const ImageCard = ({ src, title, detail, sx, customImg }) => {
         display: "flex",
         alignItems: "center",
         width: "100%",
-        justifyContent: { xs: "center", md: "flex-start" },
+        justifyContent: { xs: "center", lg: "flex-start" },
         flexShrink: 1,
       }}
     >
@@ -19,10 +19,10 @@ export const ImageCard = ({ src, title, detail, sx, customImg }) => {
           maxWidth: 618,
           flexGrow: 1,
           flexShrink: 1,
-          px: { xs: "15px", md: "32px" },
-          pt: { xs: "32px", md: "48px" },
-          gap: { xs: 3, md: 5 },
-          pb: { xs: 3, md: 4 },
+          px: { xs: "15px", lg: "32px" },
+          pt: { xs: "32px", lg: "48px" },
+          gap: { xs: 3, lg: 5 },
+          pb: { xs: 3, lg: 4 },
           flexDirection: "column",
           borderRadius: "24px",
           bgcolor: "#EAE7FFB2",
@@ -32,7 +32,7 @@ export const ImageCard = ({ src, title, detail, sx, customImg }) => {
         {!!src && (
           <Box
             sx={{
-              height: { xs: "183px", md: "288px" },
+              height: { xs: "183px", lg: "288px" },
               width: "auto",
               overflow: "hidden",
               display: "flex",
@@ -48,7 +48,7 @@ export const ImageCard = ({ src, title, detail, sx, customImg }) => {
                 sx={{
                   flexGrow: 1,
                   objectFit: "contain",
-                  width: { xs: "200px", md: "314px" },
+                  width: { xs: "200px", lg: "314px" },
                   height: "auto",
                   postion: "absolute",
                   top: 0,

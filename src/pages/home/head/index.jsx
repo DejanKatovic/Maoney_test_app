@@ -90,7 +90,7 @@ export const Head = () => {
     <>
       <CustomContainer
         sx={{
-          mt: { xs: "125px", md: "250px" },
+          mt: { xs: "125px", lg: "250px" },
           mb: { xs: "90px", lg: "140px" },
         }}
       >
@@ -127,7 +127,7 @@ export const Head = () => {
           sx={{
             display: "flex",
             alignItems: "flex-start",
-            gap: { xs: "10px", md: "24px" },
+            gap: { xs: "10px", lg: "24px" },
             height: { xs: 172, lg: "339px" },
           }}
         >
@@ -157,21 +157,21 @@ export const Head = () => {
         <CustomContainer
           sx={{
             justifyContent: "flex-start",
-            alignItems: { xs: "flex-start", md: "center" },
-            flexDirection: { xs: "column", md: "row" },
-            pl: { xs: 3, lg: 11 },
+            alignItems: { xs: "flex-start", lg: "center" },
+            flexDirection: { xs: "column", lg: "row" },
             pt: { xs: 3, lg: 5 },
             pr: 0,
-            py: { xs: "16.5px", md: 5 },
-            gap: { xs: 2, md: 9 },
+            py: { xs: "16.5px", lg: 5 },
+            gap: { xs: 2, lg: 9 },
           }}
         >
-          <Box sx={{ width: { xs: 236, md: 339 }, flexShrink: 0 }}>
+          <Box sx={{ width: { xs: 236, lg: 339 }, flexShrink: 0 }}>
             <Typography.Article
               sx={{
-                fontSize: { xs: "0.75rem", md: "1.125rem" },
+                fontSize: { xs: "0.75rem", lg: "1.125rem" },
                 lineHeight: 1.5,
                 letterSpacing: 0,
+                textAlign: "left",
               }}
             >
               We're have been recognized by Leading Finance Publications and
@@ -190,10 +190,10 @@ export const Head = () => {
                   key={uuidv4()}
                   sx={{
                     width: entry.width,
-                    mx: { xs: "16px", md: "45px" },
+                    mx: { xs: "16px", lg: "45px" },
                     display: "flex!important",
                     alignItems: "center",
-                    height: { xs: 47.5, md: 75 },
+                    height: { xs: 47.5, lg: 75 },
                   }}
                 >
                   <Box

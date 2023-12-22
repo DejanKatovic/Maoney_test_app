@@ -34,7 +34,7 @@ export const SearchBox = () => {
           <li {...props}>
             <Avatar
               loading="lazy"
-              sx={{ width: { xs: 20, md: 30 }, height: { xs: 20, md: 30 } }}
+              sx={{ width: { xs: 20, lg: 30 }, height: { xs: 20, lg: 30 } }}
               src={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png`}
               alt={option.code}
             />
@@ -54,8 +54,8 @@ export const SearchBox = () => {
                   <Avatar
                     loading="lazy"
                     sx={{
-                      width: { xs: 20, md: 30 },
-                      height: { xs: 20, md: 30 },
+                      width: { xs: 20, lg: 30 },
+                      height: { xs: 20, lg: 30 },
                     }}
                     src={`https://flagcdn.com/w40/${countries
                       .find(
@@ -95,11 +95,11 @@ export const SearchBox = () => {
       <RoundButton
         sx={{
           display: "flex",
-          width: { xs: "100%", md: "auto" },
-          position: { xs: "relative", md: "absolute" },
-          right: { xs: 0, md: "8px" },
-          top: { xs: 0, md: "5px" },
-          mt: { xs: 2, md: 0 },
+          width: { xs: "100%", lg: "auto" },
+          position: { xs: "relative", lg: "absolute" },
+          right: { xs: 0, lg: "8px" },
+          top: { xs: 0, lg: "5px" },
+          mt: { xs: 2, lg: 0 },
         }}
       >
         Download Now

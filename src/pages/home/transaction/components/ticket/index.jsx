@@ -12,7 +12,7 @@ export const Ticket = ({ content }) => {
         sx={{
           display: "flex",
           alignItems: "center",
-          px: { xs: 1.25, md: 1.5 },
+          px: { xs: 1.25, lg: 1.5 },
           py: 1,
           gap: 1.5,
           borderRadius: "24px",
@@ -35,11 +35,11 @@ export const Ticket = ({ content }) => {
           sx={{
             textAlign: "left",
             color: "text.secondary",
-            fontSize: { xs: 14, md: 16 },
+            fontSize: { xs: 14, lg: 16 },
             fontFamily: "Satoshi",
             letterSpacing: 0,
             fontWeight: "400",
-            lineHeight: { xs: "22px", md: "26px" },
+            lineHeight: { xs: "22px", lg: "26px" },
             wordwrap: "break-word",
           }}
         >

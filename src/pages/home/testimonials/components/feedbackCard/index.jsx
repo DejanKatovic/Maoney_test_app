@@ -4,10 +4,10 @@ import { Typography } from "../../../../../CustomUI/typography";
 
 export const FeedBackCard = ({ detail, userName, company, avatar }) => {
   return (
-    <Box sx={{ mx: { xs: 0, md: "20px" } }}>
+    <Box sx={{ mx: { xs: 0, lg: "20px" } }}>
       <Box
         sx={{
-          height: { xs: 405, md: 450 },
+          height: { xs: 405, lg: 450 },
           width: "100%",
           borderRadius: "24px",
           border: "1px rgba(147.69, 147.69, 147.69, 0.50) solid",
@@ -31,7 +31,7 @@ export const FeedBackCard = ({ detail, userName, company, avatar }) => {
         </Box>
         <Box
           sx={{
-            py: { xs: "25px", md: "32px" },
+            py: { xs: "25px", lg: "32px" },
             width: "100%",
             background: "#E5DBFB",
             borderBottomLeftRadius: "24px",
@@ -45,10 +45,10 @@ export const FeedBackCard = ({ detail, userName, company, avatar }) => {
             <Avatar
               alt={`${userName}-${company}`}
               src={avatar}
-              sx={{ width: { xs: 54, md: 64 }, height: { xs: 54, md: 64 } }}
+              sx={{ width: { xs: 54, lg: 64 }, height: { xs: 54, lg: 64 } }}
             />
             <Box>
-              <Typography.Title sx={{ fontSize: { xs: 18, md: 20 } }}>
+              <Typography.Title sx={{ fontSize: { xs: 18, lg: 20 } }}>
                 {userName}
               </Typography.Title>
               <Typography.Detail sx={{ textAlign: "left" }}>

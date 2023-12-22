@@ -16,17 +16,17 @@ export const FaqsItem = ({ detail, title, sx }) => {
         className="listItem"
         onClick={() => setOpen(true)}
         sx={{
-          pt: { xs: 3, md: 4.5 },
+          pt: { xs: 3, lg: 4.5 },
           px: 0,
           borderTop: "1px solid #94949480",
-          pb: { xs: open ? 1.5 : 3, md: open ? 2 : 4.5 },
+          pb: { xs: open ? 1.5 : 3, lg: open ? 2 : 4.5 },
           transition: "all .3s ease",
           ...sx,
         }}
       >
         <Box sx={{ display: "flex", width: "100%" }}>
           <Typography.Title
-            sx={{ fontSize: { xs: "1rem", md: "1.25rem" }, textAlign: "left" }}
+            sx={{ fontSize: { xs: "1rem", lg: "1.25rem" }, textAlign: "left" }}
           >
             {title}
           </Typography.Title>

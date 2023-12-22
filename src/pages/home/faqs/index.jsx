@@ -71,41 +71,41 @@ export const Faqs = () => {
         <Box
           sx={{
             display: "flex",
-            height: { xs: "auto", md: "100%" },
+            height: { xs: "auto", lg: "100%" },
             alignItems: "center",
-            px: { xs: "16px", md: "52px" },
-            flexDirection: { xs: "column", md: "row" },
+            px: { xs: "16px", lg: "52px" },
+            flexDirection: { xs: "column", lg: "row" },
           }}
         >
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
-              gap: { xs: 1.5, md: 3 },
-              alignItems: { xs: "center", md: "flex-start" },
+              gap: { xs: 1.5, lg: 3 },
+              alignItems: { xs: "center", lg: "flex-start" },
               flexGrow: 1,
-              width: { xs: "100%", md: "50%" },
-              mt: { xs: "54px", md: 0 },
+              width: { xs: "100%", lg: "50%" },
+              mt: { xs: "54px", lg: 0 },
             }}
           >
             <Typography.Heading
               sx={{
-                textAlign: { xs: "center", md: "left" },
-                fontSize: { xs: 24, md: 40 },
-                lineHeight: { xs: "34px", md: "46px" },
+                textAlign: { xs: "center", lg: "left" },
+                fontSize: { xs: 24, lg: 40 },
+                lineHeight: { xs: "34px", lg: "46px" },
                 color: "white",
               }}
             >
               One Solution for All Your Cross-Border Payments
             </Typography.Heading>
-            <Box sx={{ display: "flex", gap: { xs: 1.75, md: 2 } }}>
+            <Box sx={{ display: "flex", gap: { xs: 1.75, lg: 2 } }}>
               {[GoogleStoreImg, AppStoreImg].map((entry, index) => (
                 <Box
                   component={"img"}
                   key={uuidv4()}
                   alt={index}
                   src={entry}
-                  sx={{ width: { xs: 145, md: 160 }, height: "auto" }}
+                  sx={{ width: { xs: 145, lg: 160 }, height: "auto" }}
                 />
               ))}
             </Box>
@@ -113,10 +113,10 @@ export const Faqs = () => {
           <Box
             sx={{
               display: "flex",
-              justifyContent: { xs: "center", md: "flex-end" },
+              justifyContent: { xs: "center", lg: "flex-end" },
               flexGrow: 1,
-              height: { xs: 257, md: 406 },
-              width: { xs: "100%", md: "50%" },
+              height: { xs: 257, lg: 406 },
+              width: { xs: "100%", lg: "50%" },
               position: "relative",
             }}
           >
@@ -124,16 +124,16 @@ export const Faqs = () => {
               <Box
                 component={"img"}
                 src={Iphone2}
-                sx={{ width: { xs: 238, md: 354 }, pt: 7, height: "auto" }}
+                sx={{ width: { xs: 238, lg: 354 }, pt: 7, height: "auto" }}
               />
               <Box
                 sx={{
-                  width: { xs: 64, md: 140 },
-                  height: { xs: 64.17, md: 136.12 },
-                  left: { xs: -38, md: -148 },
+                  width: { xs: 64, lg: 140 },
+                  height: { xs: 64.17, lg: 136.12 },
+                  left: { xs: -38, lg: -148 },
                   top: {
                     xs: 41.2,
-                    md: 119.26,
+                    lg: 119.26,
                   },
                   position: "absolute",
                   transformOrigin: "0 0",

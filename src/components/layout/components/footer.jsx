@@ -36,7 +36,7 @@ const NavigationItem = ({ title, tags }) => {
   const navigate = useNavigate();
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-      <Typography.SubTitle sx={{ fontSize: { xs: "1rem", md: "1.25rem" } }}>
+      <Typography.SubTitle sx={{ fontSize: { xs: "1rem", lg: "1.25rem" } }}>
         {title}
       </Typography.SubTitle>
       <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
@@ -54,7 +54,7 @@ const NavigationItem = ({ title, tags }) => {
             }}
           >
             <Typography.Article
-              sx={{ fontSize: { xs: 14, md: 16 }, textAlign: "left" }}
+              sx={{ fontSize: { xs: 14, lg: 16 }, textAlign: "left" }}
               className={"tagTitle"}
             >
               {entry}
@@ -100,9 +100,9 @@ export const Footer = () => {
           display: "flex",
           width: "100%",
           flexDirection: "column",
-          gap: { xs: 5, md: 6.75 },
-          pt: { xs: 6.75, md: 9 },
-          pb: { xs: 6, md: 9 },
+          gap: { xs: 5, lg: 6.75 },
+          pt: { xs: 6.75, lg: 9 },
+          pb: { xs: 6, lg: 9 },
           px: { xs: 3, lg: 0 },
         }}
       >
@@ -144,7 +144,7 @@ export const Footer = () => {
           <Box
             className="feedbackSubmitForm"
             sx={{
-              display: { xs: "none", md: "flex" },
+              display: { xs: "none", lg: "flex" },
               flexShrink: 2,
               flexGrow: 1,
               width: "100%",
@@ -161,7 +161,7 @@ export const Footer = () => {
             >
               <Box>
                 <Typography.SubTitle
-                  sx={{ fontSize: { xs: "1rem", md: "1.25rem" } }}
+                  sx={{ fontSize: { xs: "1rem", lg: "1.25rem" } }}
                 >
                   Sign up for our newsletter
                 </Typography.SubTitle>

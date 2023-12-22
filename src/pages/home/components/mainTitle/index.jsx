@@ -7,8 +7,8 @@ export const MainTitle = ({ header, title, detail, sx }) => {
     <CustomContainer
       sx={{
         maxWidth: "692px",
-        mt: { xs: "64px", md: "112px" },
-        mb: { xs: "30px", md: "52px" },
+        mt: { xs: "64px", lg: "112px" },
+        mb: { xs: "30px", lg: "52px" },
         ...sx,
       }}
     >

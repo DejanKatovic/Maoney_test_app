@@ -65,12 +65,20 @@ export const Transaction = () => {
         title={heading.title}
         detail={heading.detail}
       />
-      <Grid container alignItems="center" columnSpacing={3}>
-        <Grid
-          item
-          xs={12}
-          md
-          sx={{ display: "flex", justifyContent: "flex-start" }}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", lg: "row" },
+          gap: { xs: 3, lg: 1 },
+          width: "100%",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            maxWidth: { xs: "100%", lg: "50%" },
+            justifyContent: { xs: "center", lg: "flex-start" },
+          }}
         >
           <Box
             sx={{
@@ -120,17 +128,12 @@ export const Transaction = () => {
               ))}
             </Slider>
           </Box>
-        </Grid>
+        </Box>
         <CustomDivder />
-        <Grid
-          item
-          xs={12}
-          md
-          sx={{ display: "flex", justifiyContent: "right" }}
-        >
+        <Box sx={{ display: "flex", justifiyContent: "right" }}>
           <ImageCard src={Iphone2} title={data.title} detail={data.detail} />
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </CustomContainer>
   );
 };

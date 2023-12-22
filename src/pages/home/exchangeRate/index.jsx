@@ -63,10 +63,10 @@ export const ExchangeRate = () => {
       />
       <Box
         sx={{
-          gap: { xs: "24px", md: "33px" },
+          gap: { xs: "24px", lg: "33px" },
           display: "flex",
           alignItems: "center",
-          flexDirection: { xs: "column", md: "row" },
+          flexDirection: { xs: "column", lg: "row" },
           width: "100%",
           justifyContent: "space-between",
         }}
@@ -77,7 +77,7 @@ export const ExchangeRate = () => {
             <Box sx={{ position: "relative" }}>
               <Box
                 sx={{
-                  height: { xs: "183px", md: "288px" },
+                  height: { xs: "183px", lg: "288px" },
                   width: "100%",
                   overflow: "hidden",
                   position: "relative",
@@ -92,12 +92,12 @@ export const ExchangeRate = () => {
                     sx={{
                       width: {
                         xs: 80,
-                        md: 141,
+                        lg: 141,
                       },
                       height: "auto",
                       position: "absolute",
                       bottom: 0,
-                      left: { xs: "-45px", md: "-82px" },
+                      left: { xs: "-45px", lg: "-82px" },
                       zIndex: -1,
                     }}
                     src={CoinImg}
@@ -108,7 +108,7 @@ export const ExchangeRate = () => {
                     alt={`${data.title}-img`}
                     sx={{
                       objectFit: "contain",
-                      width: { xs: "200px", md: "314px" },
+                      width: { xs: "200px", lg: "314px" },
                       height: "auto",
                       postion: "absolute",
                       top: 0,
@@ -119,12 +119,12 @@ export const ExchangeRate = () => {
                     component={"img"}
                     sx={{
                       position: "absolute",
-                      width: { xs: 80, md: 114 },
+                      width: { xs: 80, lg: 114 },
                       height: "auto",
                       transform: "rotate(3.76deg)",
                       transformOrigin: "0 0",
-                      top: { xs: "-7px", md: "21.9px" },
-                      right: { xs: -32.5, md: -62 },
+                      top: { xs: "-7px", lg: "21.9px" },
+                      right: { xs: -32.5, lg: -62 },
                       zIndex: 3,
                     }}
                     src={DollarImg}
@@ -145,7 +145,7 @@ export const ExchangeRate = () => {
             justifyContent: "ent-start",
             alignItems: "flex-start",
             display: "flex",
-            gap: { xs: 3, md: 7.5 },
+            gap: { xs: 3, lg: 7.5 },
           }}
         >
           {currencies.map((entry) => (

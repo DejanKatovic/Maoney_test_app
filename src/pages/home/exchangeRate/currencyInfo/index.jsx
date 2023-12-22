@@ -38,7 +38,7 @@ export const CurrencyInfo = ({ country, CurrencySymbol, detail }) => {
         />
       </Box>
       <Box>
-        <Typography.SubTitle sx={{ fontSize: { xs: 18, md: 20 } }}>
+        <Typography.SubTitle sx={{ fontSize: { xs: 18, lg: 20 } }}>
           {country}
         </Typography.SubTitle>
         <Typography.Detail>{detail}</Typography.Detail>
