@@ -9,7 +9,6 @@ export const ImageCard = ({ src, title, detail, sx, customImg }) => {
         alignItems: "center",
         width: "100%",
         justifyContent: { xs: "center", md: "flex-start" },
-        display: "flex",
         flexShrink: 1,
       }}
     >
